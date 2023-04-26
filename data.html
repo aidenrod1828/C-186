@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title color="white">Firework Particles</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-sky color="#000000"></a-sky>
+            <a-camera position="0 0 30"></a-camera>
+            <a-assets>
+                <img id="abc" src="sky.jpg">
+            </a-assets>
+            <a-image src="#abc" width="5" height="5"></a-image>
+            <a-entity position="0 1 0" 
+                spe-particles="
+                    color:yellow, red, cyan, black;
+                    distribution:sphere;
+                    randomize-velocity:true;
+                    radius:10;
+                    particle-count:100000;
+                    velocity:5;
+                    velocity-spread:150;
+                    drag:1;
+                    max-age:2;
+                    duration:-100;
+                    blending:additive;
+                    active-multiplier:1000;
+                    size:1,1,1,0
+                "
+            ></a-entity>
+            <a-entity position="-50 1 0" 
+                spe-particles="
+                    color:blue, orange, green, pink;
+                    distribution:sphere;
+                    randomize-velocity:true;
+                    radius:10;
+                    particle-count:100000;
+                    velocity:5;
+                    velocity-spread:150;
+                    drag:1;
+                    max-age:2;
+                    duration:-100;
+                    blending:additive;
+                    active-multiplier:100000000000;
+                    size:1,1,1,0
+                "
+            ></a-entity>
+            <a-entity position="50 1 0" 
+                spe-particles="
+                    color:blue, orange, green, pink;
+                    distribution:sphere;
+                    randomize-velocity:true;
+                    radius:10;
+                    particle-count:100000;
+                    velocity:5;
+                    velocity-spread:150;
+                    drag:1;
+                    max-age:2;
+                    duration:-100;
+                    blending:additive;
+                    active-multiplier:1000;
+                    size:1,1,1,0
+                "
+            ></a-entity>
+        </a-scene>
+    </body>
+</html>
